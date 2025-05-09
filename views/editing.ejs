@@ -1,0 +1,16 @@
+<% if(todo_to_edit && todo_to_edit.length != 0){ %>
+    <form action="/editing/<%= todo_to_edit[0].id %>" method="POST" class="for_edit">
+        <div>
+       <textarea id="todo" name="todo" required> <%= todo_to_edit[0].todos %> </textarea>
+       <button type="submit">
+          <img src="../Images/tick_save.svg" alt="Save" height="30">
+       </button></div>
+    </form>
+
+
+
+      <div class="add_del"> 
+        <a href="http://localhost:3000/" class="add_one_bt"><img src="../Images/back.svg" height="35" alt="Back" ></a>
+       
+      </div>
+      <% } %>

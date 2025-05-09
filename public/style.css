@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+  min-height: 135vh;
+}
+body{
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url('./Images/Purple-HD-Wallpaper-Free-download.png') ;
+    background-position-y: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    overflow-x:hidden ;
+}
+
+
+h1{
+    color:white;
+    font-family: kablammo;
+    font-size: 38px;
+
+}
+h2{
+    font-family: "Patrick Hand SC", serif;
+    font-weight: 600;
+font-size: 40px;
+
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+
+}
+header img{
+    margin-left: 30px;
+    position: absolute ;
+    left: 0;
+    cursor: pointer;
+}
+main{
+    margin-top:23px ;
+
+}
+.todo_list{
+height: auto;
+width: 40vw;
+border-radius: 25px;
+padding: 0px 15px 15px 15px;
+background-color: #908CD3;
+min-height: 30vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.top_headings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 112%;
+	height: 104px;
+	align-self: flex-start;
+	background-color: #908CD3;
+	border-radius: 36px;
+	transform: translateX(-35px) translateY(-5px);
+	box-shadow: 0px 5px 5px rgb(50, 45, 117);
+}
+.alignner{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.create {
+	height: 62%;
+	width: 95%;
+    padding: 20px;
+	border-radius: 14px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.top_headings div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 50px;
+	width: 96%;
+	height: 74%;
+	background-color: white;
+	border-radius: 28px;
+}
+.top_headings div p {
+ font-family: laila;
+ font-size: 20px;
+ margin-top: 5px;
+}
+.create form{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+}
+.create form div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.create form div button {
+    background-color: rgba(144, 140, 211,0.3);
+    border-radius: 25px;
+
+    border: none;
+}
+.create form div button:hover {
+    background-color: rgba(144, 140, 211,0.9);
+}
+.create form div img{
+    cursor: pointer;
+}
+.create form div textarea{
+    width: 92%;
+    height: 40px;
+    padding: 6px 12px 0px 12px;
+    border-bottom: 2px solid #9244b1;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    color: #333;
+    font-family: Montserrat Alternates;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .create form div textarea:hover,
+  .create form textarea:focus {
+    border-color: #9244b1;
+    box-shadow: 0px 1px 20px rgb(144, 140, 211);
+     
+    background: #fff;
+    outline: none;
+  }
+
+  .side_bar{
+    width: 20vw;
+    height: 80vh;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .user_name{
+    width: 95%;
+    border-bottom: 1px solid grey;
+    padding: 15px 10px;
+    color: white;
+    font-family: laila;
+    
+  }
+  .records{
+    height: 90%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .records a {
+    border-bottom: 1px solid grey;
+    text-decoration: none;
+    width: 80%;
+    text-align: center;
+    padding: 10px 0px;
+    color: white;
+    font-family: laila;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .list{
+    width: 100%;
+    padding: 3px 20px;
+    background-color: white;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .list:last-child{
+    border-radius: 0px 0px 20px 20px ;
+  }
+  .list div span {
+    height: auto;
+  }
+  .list button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .list label span{
+    font-family: Montserrat Alternates;
+  }
+  .list p {
+    font-family: Montserrat Alternates;
+    margin: 10px 0px;
+  }
+  .add_one_bt{
+    height: 70px ;
+    width: 70px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none ;
+    border-radius: 50%;
+    font-size: 40px;
+    background-color: rgb(98, 74, 184); 
+    text-decoration: none;
+     color: white;
+  }
+  .add_del{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+  }
+  .for_edit {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    padding: 10px 15px;
+    
+  }
+.for_edit textarea{
+  width: 90%;
+  height: 40px;
+  padding: 6px 12px 0px 12px;
+  border-bottom: 2px solid #9244b1;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  color: #333;
+  font-family: Montserrat Alternates;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.for_edit button{
+  height: 50px;
+  width: 50px;
+  background-color: rgba(144, 140, 211,0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+}
+.for_edit div{
+  display: flex;
+  justify-content: space-between;
+}
+.for_edit textarea:hover,
+.for_edit textarea:focus {
+  border-color: #9244b1;
+  box-shadow: 0px 1px 20px rgb(144, 140, 211);
+   
+  background: #fff;
+  outline: none;
+}
+
+.for_edit button:hover {
+  background-color: rgba(144, 140, 211,0.9);
+}
+  
+/* check box styling */
+
+.checkbox-wrapper-61 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-61 *,
+.checkbox-wrapper-61 ::after,
+.checkbox-wrapper-61 ::before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-61 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.checkbox-wrapper-61 .check {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+}
+.checkbox-wrapper-61 .label svg {
+  vertical-align: middle;
+}
+.checkbox-wrapper-61 .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: .5s stroke-dashoffset;
+  opacity: 0;
+}
+.checkbox-wrapper-61 .check:checked + label svg g path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}

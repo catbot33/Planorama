@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planorama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Laila:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <img src="./Images/menu_img.svg" alt="menu for past todo lists" height="50" id="hamburger"> 
+        <h1>PLANORAMA</h1>
+    </header>
+    <div>
+<main>
+
+<div class="alignner">
+
+    <div class="todo_list"> 
+        <div class="top_headings"> <div>   <H2>To do list </H2><% if(today) { %> <p> <%= today %></p> <% } %>  </div>     </div>
+   <% if(!todos_list || todos_list.length === 0){ %>
+       <%- include("create.ejs") %>
+       <% } else{ %>
+      <% todos_list.forEach(item => { %>
+      <div class="list">
+
+        <div class="checkbox-wrapper-61">
+          <input type="checkbox" class="check" id=<%= item.id %> />
+          <label for= <%= item.id %> class="label">
+            <svg width="45" height="45" viewbox="0 0 95 95">
+              <rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+              <g transform="translate(0,-952.36222)">
+                <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="black" stroke-width="3" fill="none" class="path1" />
+              </g>
+            </svg>
+            <span><%= item.todos %></span>
+          </label>
+        </div>
+              
+         
+          <form action="/Edit/<%= item.id %>" method="get">
+          <button type="submit">
+            <img src="./Images/edit_img.svg" alt="EDIT" height="20">
+         </button>
+        </form>
+    </div>
+     <%  }); %>
+
+ <div class="add_del"> 
+  <a href="http://localhost:3000/Delete" class="add_one_bt"><img src="./Images/delete_img.svg" height="35" alt="Delete" ></a>
+  <a href="http://localhost:3000/add_one" class="add_one_bt">+</a>
+ 
+</div>
+ 
+<% } %>
+
+    </div>
+</div>
+
+</main>
+
+
+</div>
+<div class="side_bar"> 
+   <div class="user_name"><p>RAVEN CAT </p></div> 
+ <div class="records">
+  <a href="http://localhost:3000/">today</a> 
+  <% if(user_wrotes && user_wrotes.length != 0){ %>
+    <% user_wrotes.forEach(wrote => { %>
+      <% if(today != wrote.date) {%>
+           <a href="http://localhost:3000/records/<%= wrote.date %> "><%= wrote.date %></a>
+        <% } %>
+
+    <% }); %>
+    <% } %>
+
+    
+   </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="style.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<% if(todos_list && todos_list.length != 0){ %>
+<% todos_list.forEach(item => { %>
+   <div class="list">
+         <p><%= item.todos %></p>
+
+      
+     <form action="/delete_one/<%= item.id %>" method="post"> 
+       <button type="submit">
+         <img src="./Images/cross.svg" alt="Delete" height="25">
+      </button>
+    </form> 
+ </div>
+ <%  }); %>     
+  <% } %>
+  <div class="add_del"> 
+    <a href="http://localhost:3000/" class="add_one_bt"><img src="./Images/back.svg" height="35" alt="Delete" ></a>
+   
+  </div>

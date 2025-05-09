@@ -1,0 +1,7 @@
+<% if(todos_list && todos_list.length != 0){ %>
+    <% todos_list.forEach(item => { %>
+       <div class="list">
+             <p><%= item.todos %></p>
+     </div>
+     <%  }); %>     
+      <% } %>
