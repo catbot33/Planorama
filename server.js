@@ -28,7 +28,7 @@ const db= new pg.Client({
     user : "postgres",
     database : "planorama",
     host: "localhost",
-    password:"cat hissed 33",
+    password:"....",
     port:"5432"
 })
 db.connect();
